@@ -21,12 +21,13 @@ class ContactController extends Controller
          [
             'name' => 'required|string|min:3|max:15',
             'phone' => 'required|integer|numeric|digits:11',
-            'email' => 'required|email|',
+            'email' => 'required|email:rfc,strict,filter',
             'subject' =>  'required|string|max:20',
             'message' => 'required|string|max:255',
          ],
          [
             'phone.integer' => 'Enter a valid phone number',
+            'name.alpha' => 'Name must be alphabet alone',
          ]
       );
 
@@ -40,7 +41,6 @@ class ContactController extends Controller
       ];
       $user_name = $details['name'];
       $to = "secretary@ecostrongcompany.com.ng";
-
 
       Mail::to($to)->send(new ContactMail($details));
       return back()->with('message_sent', "$user_name, Your message has been sent successfully! We will get back to you promptly.");

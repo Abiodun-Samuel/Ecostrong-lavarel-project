@@ -23,10 +23,10 @@ class FormController extends Controller
          [
             'form_type' => 'required',
             'training_type' => 'required',
-            'surname' => 'required|string|min:3|max:50',
+            'surname' => 'required|string|min:3|max:50|alpha',
             'othernames' => 'string|min:3|max:50',
             'phone' =>  'required|integer|numeric|digits:11',
-            'email' => 'required|email',
+            'email' => 'required|email:rfc,strict,filter',
             'address' => 'required|max:160|',
             'gender' => 'required',
             'year' =>  'required|integer|numeric|lt:2003',
@@ -56,8 +56,8 @@ class FormController extends Controller
 
       $user = $formDetails['surname'];
 
-      return ($request->all());
-      // Mail::to('abiodunsamyemi@gmail.com')->send(new FormMail($formDetails));
-      // return back()->with('message_sent', "$user, Your Application has been sent successfully! We will get back to you promptly");
+      Mail::to('secretary@ecostrongcompany.com.ng')->send(new FormMail($formDetails));
+      return back()->with('message_sent', "$user, Your Application has been sent successfully! We will get back to you promptly");
+
    }
 }

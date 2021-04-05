@@ -30,3 +30,6 @@ Route::post('/send-message', [ContactController::class, 'sendEmail'])->name('con
 // Vacancy
 Route::get('/forms/vacancy', [VacancyFormController::class, 'vacancy']);
 Route::post('/forms/submit', [VacancyFormController::class, 'vacancySubmit'])->name('vacancy.submit');
+Auth::routes();
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');

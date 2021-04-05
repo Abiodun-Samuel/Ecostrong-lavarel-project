@@ -191,6 +191,10 @@
     background-size: cover;
     background-position: center;
 }
+/* .forms .form-control:focus {
+    outline:none !important;
+    border: none !important;
+} */
 
 .forms input[type="number"] {
     -moz-appearance: textfield;
@@ -213,7 +217,7 @@
    border: 1px solid #757575;
    font-size: 13px;
    font-weight: 600;
-   outline: 0;
+   outline: none;
    border-radius: 0;
    color: #212121;
    padding: 5px;
@@ -224,15 +228,11 @@
     border: none;
     border-radius: 0;
     border-bottom: 1.5px solid#EC7063;
-    outline: 0;
+    outline: none;
     transition: 450ms;
     color: #212121;
 }
 
-input[type="text"]:focus{
-   outline: 0 !important;
-   border:0;
-}
 .forms select.dob{
     border: 0;
     width: 60px;

@@ -7,7 +7,7 @@
 
         <div class="container">
             <div class="section-title">
-                <P class="my-3 text-uppercase"> Kindly Fill the Application form below appropriately </P>
+                <P class="my-3 text-uppercase"> <b>Kindly Fill the Application form below appropriately </b> </P>
             </div>
 
 
@@ -29,6 +29,8 @@
                         <form action="{{ route('vacancy.submit') }} " enctype="multipart/form-data" method="POST"
                             role="form" class="contactForm">
                             @csrf
+
+                            <p> <small>* fields are required</small></p>
 
                             {{-- Name --}}
                             <div class="form-row">
@@ -176,10 +178,11 @@
                             {{-- Upload cv --}}
                             <div class="form-row">
 
-                                <div class="form-group col-lg-6 col-md-6 col-sm-6">
+                                <div class="form-group col-lg-12 col-md-12 col-sm-12">
                                     <label for="cv">Upload your CV:<span>*</span> </label>
                                     <input type="file" id="cv" name="cv" accept="file/doc, file/pdf">
-                                    <label for="cv"> <small> <em> (Only pdf and doc file format) </em> </small></label>
+                                    <label for="cv"> <small> <em> <b>(pdf and doc file format, less than 2mb)</b> </em>
+                                        </small></label>
                                     @error('cv')
                                         <div class="alert alert-danger"> <small>{{ $message }}</small></div>
                                     @enderror
@@ -201,7 +204,7 @@
                                 </div>
                             </div>
 
-                            <p> <small>* fields are required</small></p>
+
 
                             {{-- submit button --}}
                             <div class="text-center my-3">

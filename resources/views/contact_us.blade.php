@@ -53,7 +53,6 @@
                                             {{-- phone --}}
                                             <div class="form-group col-lg-6">
 
-
                                                 <input type="tel" class="form-control" name="phone" id="phone"
                                                     placeholder="080 XXX XXXX XXX" value="{{ old('phone') }}" />
 
