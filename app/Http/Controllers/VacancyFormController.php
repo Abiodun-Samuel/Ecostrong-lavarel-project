@@ -6,7 +6,6 @@ use App\Mail\VacancyForm;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Mail;
 use Illuminate\Http\UploadedFile;
-use Illuminate\Support\Recaptcha;
 
 use Http\Controllers;
 
@@ -32,7 +31,7 @@ class VacancyFormController extends Controller
             'address' =>  'required|string|max:100',
             'state' => 'required',
             'birthday' => 'date',
-            'cv' => 'required|file|mimes:pdf,doc,docx|lt:2048',
+            'cv' => 'required|file|mimes:pdf,doc,docx',
             'confirm' => 'required',
             // 'g-recaptcha-response' => 'required|recaptcha'
          ],
