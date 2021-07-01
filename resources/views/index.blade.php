@@ -7,23 +7,18 @@
     <div id="hero">
         <div class="container">
             <div class="row">
-                <div class="col-lg-6 hero-text">
-                    <h1 data-aos="slide-left" data-aos-duration="200">
-                        SELL. BUY. BUILD. INVEST.
+                <div class="col-lg-12 hero-text text-center">
+                    <h1 data-aos="fade-up">
+                        WE SELL. BUY. BUILD. INVEST.
                     </h1>
-                    <p data-aos="slide-right" data-aos-duration="400"> Wide range of properties and business opportunities
-                        to explore at <span>Ecostrong</span>. We are
-                        committed to service with integrity.
+
+                    <p data-aos="fade-up" data-aos-delay="50">At <span>Ecostrong</span>, we have wide range of properties and business opportunities to explore </span>. We are committed to service with integrity.
                     </p>
 
-
-                    <div data-aos="fade-up" data-aos-duration="500" data-aos-delay="500">
+                    <div data-aos="fade-up" data-aos-delay="100">
                         <a href="{{ url('/contact_us') }}"> <button class="btn pry"> Contact Us</button> </a>
                         <a href="{{ url('/properties') }}"> <button class="btn sec">View Properties</button> </a>
                     </div>
-                </div>
-                <div data-aos="fade-up" data-aos-duration="500" data-aos-delay="500" class="col-lg-6 hero-img">
-                    <img class="img-fluid" src="img/hero-img.png" alt="">
                 </div>
             </div>
         </div>
